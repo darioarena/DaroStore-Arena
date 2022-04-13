@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap");
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 70px;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  .identidad {
+    display: flex;
+    flex-flow: row nowrap;
+    .logo {
+      height: 50px;
+      margin: 10px 40px;
+    }
+    .titulo {
+      font-family: "Roboto", sans-serif;
+      font-size: 45px;
+      font-weight: 700;
+      margin: auto;
+      color: dimgrey;
+    }
+  }
+  .menu {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    justify-content: flex-end;
+    li {
+      align-self: center;
+    }
+    .opcion {
+      text-decoration: none;
+      padding: 20px;
+      line-height: 40px;
+      align-self: center;
+      font-size: 20px;
+      font-weight: 500;
+      color: black;
+      &:hover {
+        border-bottom: 5px solid blue;
+      }
+    }
+    #carrito {
+      width: 100px;
+      height: 60px;
+    }
+  }
+}
