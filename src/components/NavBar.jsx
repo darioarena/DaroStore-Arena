@@ -1,6 +1,7 @@
 import React from 'react';
-import './NavBar.css';
+import './Styles/NavBar.css';
 import imgLogo from '../assets/img/logo.png';
+import CartWidget from './CartWidget';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { loadAnimation } from "lottie-web";
@@ -19,7 +20,7 @@ function NavBar(props) {
         <li><a href="b" className='opcion'>Perifericos</a></li>
         <li><a href="c" className='opcion'>Mobiliario</a></li>
         {/* <li><FontAwesomeIcon icon="fa-solid fa-cart-shopping" className='opcion' id='carrito'/></li> */}
-        <li><lord-icon trigger="hover" src="https://cdn.lordicon.com/slkvcfos.json" className='opcion' id='carrito'></lord-icon></li>
+        <li><CartWidget/></li>
       </ul>
     </div>
   );
