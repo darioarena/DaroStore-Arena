@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap");
+.cardConteiner {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  width: 250px;
+  height: 200px;
+  margin: 100px auto;
+  border-radius: 30px;
+  background: #f1f0f0;
+  -webkit-box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+          box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.cardConteiner .count button {
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 40px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.cardConteiner .count .countSub:hover {
+  background-color: #e52e2e;
+  -webkit-box-shadow: 0px 15px 20px rgba(229, 46, 46, 0.4);
+          box-shadow: 0px 15px 20px rgba(229, 46, 46, 0.4);
+  color: #fff;
+}
+
+.cardConteiner .count .countAdd:hover {
+  background-color: #2ee59d;
+  -webkit-box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+          box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+}
+
+.cardConteiner .count span {
+  margin: 10px 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cardConteiner .onAdd {
+  margin: 25px 0px 0px 0px;
+}
+
+.cardConteiner .onAdd button {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.cardConteiner .onAdd button:hover {
+  background-color: #2e34e5;
+  -webkit-box-shadow: 0px 15px 20px rgba(49, 46, 229, 0.5);
+          box-shadow: 0px 15px 20px rgba(49, 46, 229, 0.5);
+  color: #fff;
+}
+/*# sourceMappingURL=ItemCount.css.map */
