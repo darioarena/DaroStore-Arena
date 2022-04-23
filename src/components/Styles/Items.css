@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap");
+.gallery {
+  width: 90%;
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.gallery .card {
+  width: 250px;
+  height: 350px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 10px 12px;
+}
+
+.gallery .card .blob {
+  height: 10px;
+  width: 75%;
+  border-radius: 0 0 30px 30px;
+  margin: 0 auto;
+  background-color: #2a81bb;
+  visibility: visible;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.gallery .card .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px auto 10px auto;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 11px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.gallery .card h3 {
+  display: block;
+  padding: 15px 10px;
+  font-size: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: -99;
+  font-family: "Poppins", sans-serif;
+}
+
+.gallery .card h4 {
+  display: none;
+}
+
+.gallery .card:hover {
+  -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+          box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+  background-color: #4bb8ff;
+}
+
+.gallery .card:hover .blob {
+  height: 0;
+}
+
+.gallery .card:hover .img {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: white;
+  z-index: 99999;
+}
+
+.gallery .card:hover h3 {
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+.gallery .card:hover h4 {
+  color: whitesmoke;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  font-size: 25px;
+  font-weight: 500;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: -99;
+  font-family: "Poppins", sans-serif;
+}
+/*# sourceMappingURL=Items.css.map */
