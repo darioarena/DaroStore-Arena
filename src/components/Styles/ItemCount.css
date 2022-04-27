@@ -3,9 +3,9 @@
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  width: 250px;
-  height: 200px;
-  margin: 100px auto;
+  width: 300px;
+  height: 170px;
+  margin: auto;
   border-radius: 30px;
   background: #f1f0f0;
   -webkit-box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
@@ -36,6 +36,10 @@
   outline: none;
 }
 
+.cardConteiner .count h3 {
+  margin: 10px;
+}
+
 .cardConteiner .count .countSub:hover {
   background-color: #e52e2e;
   -webkit-box-shadow: 0px 15px 20px rgba(229, 46, 46, 0.4);
@@ -57,7 +61,7 @@
 }
 
 .cardConteiner .onAdd {
-  margin: 25px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
 }
 
 .cardConteiner .onAdd button {

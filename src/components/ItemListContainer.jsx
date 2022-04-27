@@ -22,7 +22,10 @@ function ItemListContainer(props) {
       .catch((errorPromise) => console.error(errorPromise));
   }, []);
   return (
-  <ItemList productos={products} />
+    <div>
+      <ItemList productos={products} />
+    </div>
+  
   );
 }
 

@@ -7,7 +7,7 @@ function ItemList({ productos }) {
     <div className="gallery">
       {productos.map((thisProduct) => {
         return (
-            <Item producto={thisProduct} key={thisProduct.id}/>
+            <Item producto={thisProduct} key={thisProduct.id} />
         )
       })}
     </div>

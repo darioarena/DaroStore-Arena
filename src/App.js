@@ -2,15 +2,15 @@
 import "./App.css";
 import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
-// import ItemCount from "./components/ItemCount"
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer greeting='AQUI IRA EL CATALOGO DEL ECOMMERCE' />
-      {/* <ItemCount stock={5} initial={1}/> */}
+      {/* <ItemListContainer /> */}
+      <ItemDetailContainer id={1}/>
     </div>
   );
 }
