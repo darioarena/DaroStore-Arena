@@ -5,7 +5,7 @@ const products = [
     detail:
       "turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis",
     price: "$350.000",
-    stock: 14,
+    stock: 5,
     category: "PCs",
     url: "https://justcreative.com/wp-content/uploads/2020/12/16-inch-MacBook-Pro-600x350.jpg",
   },
@@ -15,7 +15,7 @@ const products = [
     detail:
       "urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus",
     price: "$180.000",
-    stock: 13,
+    stock: 9,
     category: "PCs",
     url: "https://justcreative.com/wp-content/uploads/2019/06/asus-flip-1.jpg",
   },
@@ -25,7 +25,7 @@ const products = [
     detail:
       "sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada",
     price: "$240.000",
-    stock: 19,
+    stock: 3,
     category: "PCs",
     url: "https://justcreative.com/wp-content/uploads/2019/06/Surface-Pro-6-1.jpg",
   },
