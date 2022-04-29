@@ -11,7 +11,7 @@ function getDetail(id) {
       });
       resolve(productId);
       reject(new Error("Error al solicitar datos"));
-    }, 2000);
+    }, 500);
   });
 }
 

@@ -17,7 +17,7 @@ function getProducts(idcategoria) {
         resolve(productsDB);
       }
       reject(new Error("Error al solicitar datos"));
-    }, 2000);
+    }, 500);
   });
 }
 
