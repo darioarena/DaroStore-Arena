@@ -16,10 +16,6 @@ function ItemCount(props) {
     }
   }
 
-  function onAdd() {
-    alert(`Se han agregado ${count} productos al carrito`);
-  }
-
   return (
     <div className="cardConteiner">
       <div className="count">
@@ -29,7 +25,7 @@ function ItemCount(props) {
         <button onClick={handleAdd} className="countAdd">+</button>
       </div>
       <div className="onAdd">
-        <button onClick={onAdd}>Agregar al carrito</button>
+        <button onClick={()=>props.onAdd(count)} >Agregar al carrito</button>
       </div>
     </div>
   );
