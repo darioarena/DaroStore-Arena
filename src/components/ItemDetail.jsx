@@ -3,12 +3,18 @@ import ItemCount from "./ItemCount";
 import "./Styles/Detail.css";
 import { Link } from "react-router-dom";
 import "./Styles/ItemCount.css";
+import useCartContext from "../store/CartContext";
 
 function ItemDetail({ producto }) {
   const [isInCart, setIsInCart] = useState(false);
+  const {addToCart}=useCartContext();
+  
+  
   function onAdd(count) {
-    console.log(`agregaste al carrito ${count} items`);
+    // console.log(`agregaste al carrito ${count} items`);
+    addToCart(producto,count);
     setIsInCart(true);
+    // console.log(producto,count);
   }
 
   return (
