@@ -80,4 +80,19 @@
   width: 100px;
   height: 60px;
 }
+
+.navbar .menu #quantityWidget {
+  position: absolute;
+  display: block;
+  top: 40px;
+  left: 65px;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  font-size: 11px;
+  background-color: #2a81bb;
+  font-weight: bold;
+  color: white;
+  border-radius: 50px;
+}
 /*# sourceMappingURL=NavBar.css.map */

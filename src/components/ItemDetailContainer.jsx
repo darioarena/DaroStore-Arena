@@ -11,12 +11,12 @@ function getDetail(id) {
       });
       resolve(productId);
       reject(new Error("Error al solicitar datos"));
-    }, 500);
+    }, 2000);
   });
 }
 
 function ItemDetailContainer() {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState();
   const { idproducto } = useParams();
 
   useEffect(() => {

@@ -27,10 +27,10 @@ export function CartContextProvider({ children }) {
     quantityInCart();
   };
 
-  const removeToCart = (item) => {
+  const removeToCart = (id) => {
     const newCart = [...cart];
     const cartFilter = newCart.filter((newCart) => {
-      return newCart.id !== item.id;
+      return newCart.id !== id;
     });
     setCart(cartFilter);
     quantityInCart();
@@ -51,15 +51,26 @@ export function CartContextProvider({ children }) {
   };
 
   const quantityInCart = () => {
-    let quantity=0;
+    let quantity = 0;
     for (let i = 0; i < cart.length; i++) {
       quantity += cart[i].cant;
     }
     return quantity;
   };
 
+  const totalPrice = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += (item.cant * item.price);
+    });
+    console.log(cart);
+    console.log(total);
+    return total;
+  };
 
-  return <Provider value={{ cart, addToCart, removeToCart, clearCart, quantityInCart }}>{children}</Provider>;
+  return (
+    <Provider value={{ cart, addToCart, removeToCart, clearCart, quantityInCart, totalPrice }}>{children}</Provider>
+  );
 }
 
 export default useCartContext;

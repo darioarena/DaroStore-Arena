@@ -8,7 +8,7 @@ function Item({ producto }) {
         <div className="blob"></div>
         <img className="img" src={producto.url} alt={producto.product} />
         <h3>{producto.product}</h3>
-        <h4>{producto.price}</h4>
+        <h4>${Intl.NumberFormat("es-AR").format(producto.price)}</h4>
       </Link>
     </div>
   );
