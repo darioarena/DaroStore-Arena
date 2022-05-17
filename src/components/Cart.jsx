@@ -24,7 +24,7 @@ function Cart() {
           {cart.map((itemCart) => {
             return (
               <div className="detailContainer" key={itemCart.id}>
-                <img src={itemCart.url} className="imagen"></img>
+                <img src={itemCart.url} className="imagen" alt="imagen"></img>
                 <h3 className="title">{itemCart.product}</h3>
                 <h3 className="cantidad">Cantidad: {itemCart.cant}</h3>
                 <h4 className="unitario">Unitario: ${Intl.NumberFormat("es-AR").format(itemCart.price)}</h4>
