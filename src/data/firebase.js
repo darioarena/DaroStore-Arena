@@ -1,7 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, getDoc, query, where, collection, getDocs, Timestamp, addDoc } from "firebase/firestore/lite";
-import useCartContext from "../store/CartContext";
-
 
 
 const firebaseConfig = {
