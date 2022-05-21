@@ -17,7 +17,7 @@
       @media #{$tablet} {
         margin: 10px 15px;
       }
-      @media #{$phone}{
+      @media #{$phone} {
         height: 40px;
         margin: auto 10px;
       }
@@ -59,7 +59,7 @@
       &:hover {
         border-bottom: 5px solid #2a81bb;
       }
-      @media #{$phone}{
+      @media #{$phone} {
         display: none;
       }
     }
@@ -68,6 +68,10 @@
       height: 60px;
       @media #{$tablet} {
         width: 70px;
+        height: 45px;
+      }
+      @media #{$phone} {
+        width: 60px;
         height: 45px;
       }
     }
@@ -86,4 +90,32 @@
       border-radius: 50px;
     }
   }
+}
+
+.navbarmobile{
+  #menumobile {
+    @media #{$tablet} {
+      display: none;
+    }
+    @media #{$desktop} {
+      display: none;
+    }
+  }
+.menum {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  li {
+    width: 48%;
+    list-style: none;
+    background: #2a81bb;
+    margin: 1%;
+    border-radius: 15px;
+    line-height: 30px;
+    .opmobile {
+    color: white;
+    font-family: $poppins;
+    }
+  }
+}
 }

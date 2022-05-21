@@ -5,11 +5,13 @@ import CartWidget from './CartWidget';
 import { loadAnimation } from "lottie-web";
 import { defineLordIconElement } from "lord-icon-element";
 import { Link } from 'react-router-dom';
+import MenuMobile from './MenuMobile';
 
 defineLordIconElement(loadAnimation);
 
 function NavBar() {
   return (
+    <>
     <div className='navbar'>
       <section className='identidad'>
         <Link to="/" className='identidad'>
@@ -25,6 +27,10 @@ function NavBar() {
         <li><CartWidget/></li>
       </ul>
     </div>
+    <div className='navbarmobile'>
+      <span id='menumobile'><MenuMobile/></span>
+    </div>
+    </>
   );
 }
 

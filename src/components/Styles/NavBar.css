@@ -128,6 +128,13 @@
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navbar .menu #carrito {
+    width: 60px;
+    height: 45px;
+  }
+}
+
 .navbar .menu #quantityWidget {
   position: absolute;
   display: block;
@@ -141,5 +148,42 @@
   font-weight: bold;
   color: white;
   border-radius: 50px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbarmobile #menumobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .navbarmobile #menumobile {
+    display: none;
+  }
+}
+
+.navbarmobile .menum {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.navbarmobile .menum li {
+  width: 48%;
+  list-style: none;
+  background: #2a81bb;
+  margin: 1%;
+  border-radius: 15px;
+  line-height: 30px;
+}
+
+.navbarmobile .menum li .opmobile {
+  color: white;
+  font-family: "Poppins", sans-serif;
 }
 /*# sourceMappingURL=NavBar.css.map */
