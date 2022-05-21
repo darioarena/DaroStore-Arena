@@ -88,6 +88,22 @@
       font-weight: bold;
       color: white;
       border-radius: 50px;
+      @media #{$tablet} {
+        width: 15px;
+        height: 15px;
+        top: 30px;
+        left: 45px;
+        line-height: 16px;
+        font-size: 8px;
+      }
+      @media #{$phone} {
+        width: 15px;
+        height: 15px;
+        top: 30px;
+        left: 40px;
+        line-height: 15px;
+        font-size: 10px;
+      }
     }
   }
 }
