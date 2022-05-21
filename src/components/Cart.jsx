@@ -1,21 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { loadAnimation } from "lottie-web";
 import { defineLordIconElement } from "lord-icon-element";
 import useCartContext from "../store/CartContext";
 import "./Styles/Cart.css";
+import { createBuyOrder } from "../data/firebase";
 
 defineLordIconElement(loadAnimation);
 
 function Cart() {
   const { cart, removeToCart, clearCart, totalPrice } = useCartContext();
+  const [orderID, setOrderID] = useState(false);
 
+  function handleBuy() {
+    const itemsToBuy = cart.map((item) => ({ title: item.product, cant: item.cant, price: item.price, id: item.id }));
+    const buyOrder = {
+      buyer: {
+        name: "Dario",
+        phone: "123456789",
+        email: "dario@dario.com",
+      },
+      items: itemsToBuy,
+      total: totalPrice(),
+    };
+    setOrderID(createBuyOrder(buyOrder));
+    console.log(orderID);
+    clearCart();
+  }
   if (cart.length === 0) {
-    return (
-      <div>
-        <h3 className="noItemCart">No hay items en el carrito</h3>
-        <a href="/" className="home">Volver a Home</a>
-      </div>
-    );
+    if (orderID) {
+      return (
+        <div>
+          <h3 className="noItemCart">Gracias por tu compra, tu orden es </h3>
+          <a href="/" className="home">
+            Volver a Home
+          </a>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h3 className="noItemCart">No hay items en el carrito</h3>
+          <a href="/" className="home">
+            Volver a Home
+          </a>
+        </div>
+      );
+    }
   } else {
     return (
       <div className="cardCart">
@@ -55,7 +85,7 @@ function Cart() {
                 </svg>
               </span>
             </button>
-            <button className="noselect comprar">
+            <button onClick={handleBuy} className="noselect comprar">
               <span className="text comprar">COMPRAR</span>
               <span className="icon comprar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

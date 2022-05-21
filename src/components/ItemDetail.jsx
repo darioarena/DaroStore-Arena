@@ -10,10 +10,8 @@ function ItemDetail({ producto }) {
   const { addToCart } = useCartContext();
 
   function onAdd(count) {
-    // console.log(`agregaste al carrito ${count} items`);
     addToCart(producto, count);
     setIsInCart(true);
-    // console.log(producto,count);
   }
 
   if (producto === undefined) {

@@ -63,8 +63,6 @@ export function CartContextProvider({ children }) {
     cart.forEach((item) => {
       total += (item.cant * item.price);
     });
-    console.log(cart);
-    console.log(total);
     return total;
   };
 

@@ -1,5 +1,8 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc, query, where, collection, getDocs } from "firebase/firestore/lite";
+import { getFirestore, doc, getDoc, query, where, collection, getDocs, Timestamp, addDoc } from "firebase/firestore/lite";
+import useCartContext from "../store/CartContext";
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBfapQrv_xEPrHmE4HX1CihXq--8sm9OFI",
@@ -38,4 +41,13 @@ export async function getItemDetail(id) {
   const productRef = doc(myCollection, id);
   const productSnap = await getDoc(productRef);
   return { ...productSnap.data(), id: productSnap.id };
+}
+
+export async function createBuyOrder(orderData) {
+  const orderTimestamp = Timestamp.now();
+  const orderWithDate = { ...orderData, date: orderTimestamp };
+  const myCollection=collection(firestoreDB,"buyOrders");
+  const orderDoc = await addDoc(myCollection,orderWithDate);
+  console.log(orderDoc.id);
+  return orderDoc.id;
 }
