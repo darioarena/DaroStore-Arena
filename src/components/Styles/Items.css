@@ -10,7 +10,7 @@ a:active {
 
 .gallery {
   width: 90%;
-  margin: 100px auto;
+  margin: 50px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,6 +21,19 @@ a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 120px auto;
+  }
 }
 
 .gallery .card {
@@ -81,6 +94,22 @@ a:active {
      object-fit: contain;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .gallery .card .img {
+    margin: 10px auto 10px auto;
+    width: 90%;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .gallery .card .img {
+    margin: 10px auto 10px auto;
+    width: 75%;
+    height: 150px;
+  }
+}
+
 .gallery .card h3 {
   display: block;
   padding: 0px 5px;
@@ -93,6 +122,36 @@ a:active {
 
 .gallery .card h4 {
   display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .gallery .card h4 {
+    color: #2a81bb;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    font-size: 25px;
+    font-weight: 500;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: -99;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .gallery .card h4 {
+    color: #2a81bb;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    font-size: 25px;
+    font-weight: 500;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: -99;
+    font-family: "Poppins", sans-serif;
+  }
 }
 
 .gallery .card:hover {

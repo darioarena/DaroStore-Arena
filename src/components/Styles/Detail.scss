@@ -1,14 +1,14 @@
 @import "baserules";
 
 .maxCard {
-  width: 80%;
-  height: 680px;
+  width: 70%;
+  height: 70vh;
   margin: 50px auto;
   padding: 0px 50px 15px 50px;
   font-family: $poppins;
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: 0.2fr;
+  grid-template-rows: 0.0fr;
   gap: 10px 30px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -20,6 +20,9 @@
   align-items: center;
   background: #f0f0f0;
   border-radius: 40px;
+  @media #{$tablet}{
+    gap: 0px 30px;
+  }
   .blob {
     grid-area: blob;
     align-self: start;
@@ -33,7 +36,7 @@
     grid-area: img;
     background-color: white;
     width: 100%;
-    height: 650px;
+    height: 90%;
     object-fit: contain;
     border-radius: 35px;
     box-shadow: -10px 10px 10px #bebebe;
@@ -51,6 +54,9 @@
     text-align: left;
     font-size: 16px;
     margin: 0;
+    @media #{$tablet}{
+      font-size: 12px;
+    }
   }
   .price {
     grid-area: price;

@@ -21,6 +21,14 @@
           flex-flow: column nowrap;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cardConteiner {
+    height: 140px;
+    -webkit-box-shadow: 15px 15px 30px #bebebe, -15px -5px 30px #ffffff;
+            box-shadow: 15px 15px 30px #bebebe, -15px -5px 30px #ffffff;
+  }
+}
+
 .cardConteiner .count button {
   font-size: 15px;
   width: 40px;
@@ -38,8 +46,22 @@
   outline: none;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cardConteiner .count button {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .cardConteiner .count h3 {
   margin: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cardConteiner .count h3 {
+    margin: 6px 0px;
+    font-size: 17px;
+  }
 }
 
 .cardConteiner .count .countSub:hover {
@@ -60,6 +82,12 @@
   margin: 10px 30px;
   font-size: 20px;
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cardConteiner .count span {
+    font-size: 18px;
+  }
 }
 
 .cardConteiner .onAdd {
@@ -83,6 +111,15 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cardConteiner .onAdd button {
+    font-size: 10px;
+    padding: 12px;
+    background-color: #2a81bb;
+    color: #fff;
+  }
 }
 
 .cardConteiner .onAdd button:hover {
@@ -117,5 +154,12 @@
   -webkit-box-shadow: 0px 15px 20px rgba(33, 178, 120, 0.6);
           box-shadow: 0px 15px 20px rgba(33, 178, 120, 0.6);
   color: #fff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .viewCart {
+    background-color: #21b278;
+    color: #fff;
+  }
 }
 /*# sourceMappingURL=ItemCount.css.map */

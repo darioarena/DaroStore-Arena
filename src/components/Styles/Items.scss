@@ -9,10 +9,15 @@ a:active {
 
 .gallery {
   width: 90%;
-  margin: 100px auto;
+  margin: 50px auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  @media #{$phone} {
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 120px auto;
+  }
   .card {
     width: 240px;
     height: 350px;
@@ -54,6 +59,16 @@ a:active {
       align-items: center;
       transition: all 0.5s;
       object-fit: contain;
+      @media #{$phone} {
+        margin: 10px auto 10px auto;
+        width: 90%;
+        height: 150px;
+      }
+      @media #{$tablet} {
+        margin: 10px auto 10px auto;
+        width: 75%;
+        height: 150px;
+      }
     }
     h3 {
       display: block;
@@ -65,6 +80,28 @@ a:active {
     }
     h4 {
       display: none;
+      @media #{$phone} {
+        color: #2a81bb;
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        font-size: 25px;
+        font-weight: 500;
+        transition: all 0.5s;
+        z-index: -99;
+        font-family: $poppins;
+      }
+      @media #{$tablet} {
+        color: #2a81bb;
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        font-size: 25px;
+        font-weight: 500;
+        transition: all 0.5s;
+        z-index: -99;
+        font-family: $poppins;
+      }
     }
     &:hover {
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
