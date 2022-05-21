@@ -1,18 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap");
+@import "baserules";
 
-a:link, a:visited, a:active {
-  text-decoration:none;
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
   color: black;
 }
 
 .gallery {
   width: 90%;
   margin: 100px auto;
-  display: flex; 
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   .card {
-    width: 250px;
+    width: 240px;
     height: 350px;
     background: #f0f0f0;
     border-radius: 10px;
@@ -20,13 +22,25 @@ a:link, a:visited, a:active {
     transition: all 0.5s;
     margin: 10px 12px;
     .blob {
-      height: 10px;
+      height: 30px;
       width: 75%;
       border-radius: 0 0 30px 30px;
       margin: 0 auto;
       background-color: #2a81bb;
       visibility: visible;
       transition: all 0.3s;
+      h5 {
+        color: white;
+        display: block;
+        font-size: 15px;
+        transition: all 0.3s;
+        z-index: -99;
+        font-family: "Righteous";
+        line-height: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0px;
+      }
     }
     .img {
       display: flex;
@@ -43,11 +57,11 @@ a:link, a:visited, a:active {
     }
     h3 {
       display: block;
-      padding: 15px 10px;
+      padding: 0px 5px;
       font-size: 20px;
-      transition: all 0.5s;
+      transition: all 0.3s;
       z-index: -99;
-      font-family: "Poppins", sans-serif;
+      font-family: $poppins;
     }
     h4 {
       display: none;
@@ -57,6 +71,9 @@ a:link, a:visited, a:active {
       background-color: #4bb8ff;
       .blob {
         height: 0;
+        h5 {
+          display: none;
+        }
       }
       .img {
         width: 100%;
@@ -82,7 +99,7 @@ a:link, a:visited, a:active {
         font-weight: 500;
         transition: all 0.5s;
         z-index: -99;
-        font-family: "Poppins", sans-serif;
+        font-family: $poppins;
       }
     }
   }

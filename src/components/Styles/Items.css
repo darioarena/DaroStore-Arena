@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;700&display=swap");
-a:link, a:visited, a:active {
+/*FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Righteous&family=Roboto:wght@300;400;700&display=swap");
+/*MEDIA*/
+a:link,
+a:visited,
+a:active {
   text-decoration: none;
   color: black;
 }
@@ -20,7 +24,7 @@ a:link, a:visited, a:active {
 }
 
 .gallery .card {
-  width: 250px;
+  width: 240px;
   height: 350px;
   background: #f0f0f0;
   border-radius: 10px;
@@ -31,7 +35,7 @@ a:link, a:visited, a:active {
 }
 
 .gallery .card .blob {
-  height: 10px;
+  height: 30px;
   width: 75%;
   border-radius: 0 0 30px 30px;
   margin: 0 auto;
@@ -39,6 +43,20 @@ a:link, a:visited, a:active {
   visibility: visible;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.gallery .card .blob h5 {
+  color: white;
+  display: block;
+  font-size: 15px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -99;
+  font-family: "Righteous";
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0px;
 }
 
 .gallery .card .img {
@@ -65,10 +83,10 @@ a:link, a:visited, a:active {
 
 .gallery .card h3 {
   display: block;
-  padding: 15px 10px;
+  padding: 0px 5px;
   font-size: 20px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   z-index: -99;
   font-family: "Poppins", sans-serif;
 }
@@ -85,6 +103,10 @@ a:link, a:visited, a:active {
 
 .gallery .card:hover .blob {
   height: 0;
+}
+
+.gallery .card:hover .blob h5 {
+  display: none;
 }
 
 .gallery .card:hover .img {

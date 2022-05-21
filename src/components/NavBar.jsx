@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 defineLordIconElement(loadAnimation);
 
-function NavBar(props) {
+function NavBar() {
   return (
     <div className='navbar'>
       <section className='identidad'>
@@ -19,7 +19,7 @@ function NavBar(props) {
       </section>
       <ul className='menu'>
         <li><Link to="/" className='opcion'>Todos los Productos</Link></li>
-        <li><Link to="/category/PCs" className='opcion'>PCs</Link></li>
+        <li><Link to="/category/Notebooks" className='opcion'>Notebooks</Link></li>
         <li><Link to="/category/Perifericos" className='opcion'>Perifericos</Link></li>
         <li><Link to="/category/Mobiliario" className='opcion'>Mobiliario</Link></li>
         <li><CartWidget/></li>
@@ -27,5 +27,6 @@ function NavBar(props) {
     </div>
   );
 }
+
 
 export default NavBar;

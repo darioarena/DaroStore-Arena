@@ -9,7 +9,7 @@ defineLordIconElement(loadAnimation);
 
 function Cart() {
   const { cart, removeToCart, clearCart, totalPrice } = useCartContext();
-  const [orderID, setOrderID] = useState(false);
+  const [orderID, setOrderID] = useState();
 
   function handleBuy() {
     const itemsToBuy = cart.map((item) => ({ title: item.product, cant: item.cant, price: item.price, id: item.id }));
@@ -22,6 +22,7 @@ function Cart() {
       items: itemsToBuy,
       total: totalPrice(),
     };
+    setOrderID(false);
     createBuyOrder(buyOrder).then((res) => {
       setOrderID(res);
     });
