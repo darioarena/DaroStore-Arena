@@ -22,29 +22,34 @@ function Cart() {
       items: itemsToBuy,
       total: totalPrice(),
     };
-    setOrderID(createBuyOrder(buyOrder));
-    console.log(orderID);
+    createBuyOrder(buyOrder).then((res) => {
+      setOrderID(res);
+    });
     clearCart();
   }
   if (cart.length === 0) {
-    if (orderID) {
-      return (
-        <div>
-          <h3 className="noItemCart">Gracias por tu compra, tu orden es </h3>
-          <a href="/" className="home">
-            Volver a Home
-          </a>
-        </div>
-      );
+    if (orderID === false) {
+      return <div className="loader"></div>;
     } else {
-      return (
-        <div>
-          <h3 className="noItemCart">No hay items en el carrito</h3>
-          <a href="/" className="home">
-            Volver a Home
-          </a>
-        </div>
-      );
+      if (orderID) {
+        return (
+          <div>
+            <h3 className="noItemCart">Gracias por tu compra, tu orden es {orderID}</h3>
+            <a href="/" className="home">
+              Volver a Home
+            </a>
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            <h3 className="noItemCart">No hay items en el carrito</h3>
+            <a href="/" className="home">
+              Volver a Home
+            </a>
+          </div>
+        );
+      }
     }
   } else {
     return (

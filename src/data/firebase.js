@@ -46,6 +46,5 @@ export async function createBuyOrder(orderData) {
   const orderWithDate = { ...orderData, date: orderTimestamp };
   const myCollection=collection(firestoreDB,"buyOrders");
   const orderDoc = await addDoc(myCollection,orderWithDate);
-  console.log(orderDoc.id);
   return orderDoc.id;
 }
