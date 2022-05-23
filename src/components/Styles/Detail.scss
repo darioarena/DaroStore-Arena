@@ -95,6 +95,11 @@
       width: 100%;
     }
   }
+  .viewCart{
+    @media #{$phone}{
+      margin-bottom: 10%;
+    }
+  }
 }
 
 .loader {

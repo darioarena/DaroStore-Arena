@@ -149,6 +149,12 @@
   width: 100%;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .maxCard .viewCart {
+    margin-bottom: 10%;
+  }
+}
+
 .loader {
   --height-of-loader: 4px;
   --loader-color: #2a81bb;

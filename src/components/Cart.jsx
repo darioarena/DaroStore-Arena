@@ -55,17 +55,24 @@ function Cart() {
   } else {
     return (
       <div className="cardCart">
-        <div className="blob"></div>
+        <div className="blob">
+          <span className="cartTable"></span>
+          <span className="cartTable titleTop">PRODUCTO</span>
+          <span className="cartTable">CANTIDAD</span>
+          <span className="cartTable">$ UNITARIO</span>
+          <span className="cartTable">$ SUBTOTAL</span>
+          <span className="cartTable lastColumn"></span>
+        </div>
         <div className="itemContainer">
           {cart.map((itemCart) => {
             return (
               <div className="detailContainer" key={itemCart.id}>
                 <img src={itemCart.url} className="imagen" alt="imagen"></img>
                 <h3 className="title">{itemCart.product}</h3>
-                <h3 className="cantidad">Cantidad: {itemCart.cant}</h3>
-                <h4 className="unitario">Unitario: ${Intl.NumberFormat("es-AR").format(itemCart.price)}</h4>
+                <h3 className="cantidad"><span className="cant">Cantidad</span>{itemCart.cant}</h3>
+                <h4 className="unitario">${Intl.NumberFormat("es-AR").format(itemCart.price)}</h4>
                 <h4 className="subtotal">
-                  Subtotal: ${Intl.NumberFormat("es-AR").format(itemCart.cant * itemCart.price)}
+                  ${Intl.NumberFormat("es-AR").format(itemCart.cant * itemCart.price)}
                 </h4>
                 <button onClick={() => removeToCart(itemCart.id)}>
                   <lord-icon
