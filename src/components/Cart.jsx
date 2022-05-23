@@ -47,7 +47,7 @@ function Cart() {
     nuevoTitulo.setAttribute('class','cartTable')
     blobForm.appendChild(nuevoTitulo);
     blobForm.style.gridTemplateColumns='1fr';
-    document.getElementsByClassName('detailContainer')[0].style.display='none';
+    document.getElementsByClassName('itemContainer')[0].style.display='none';
     document.getElementsByClassName('total')[0].style.display='none';
     document.getElementsByClassName('noselect')[0].style.display='none';
     document.getElementsByClassName('comprar')[0].style.display='none';
