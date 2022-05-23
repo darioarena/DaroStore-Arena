@@ -3,7 +3,7 @@
 /*MEDIA*/
 .maxCard {
   width: 70%;
-  height: 70vh;
+  min-height: 70vh;
   margin: 50px auto;
   padding: 0px 50px 15px 50px;
   font-family: "Poppins", sans-serif;
@@ -11,8 +11,8 @@
   display: grid;
   -ms-grid-columns: 0.5fr 0.5fr;
       grid-template-columns: 0.5fr 0.5fr;
-  -ms-grid-rows: 0.0fr;
-      grid-template-rows: 0.0fr;
+  -ms-grid-rows: 0fr;
+      grid-template-rows: 0fr;
   gap: 10px 30px;
   grid-auto-flow: row;
       grid-template-areas: "blob blob" "img title" "img description" "img price" "img count";
@@ -26,6 +26,22 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .maxCard {
     gap: 0px 30px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .maxCard {
+    width: 85%;
+    margin: 150px auto;
+    padding: 0px 5% 0px 5%;
+    gap: 0px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
   }
 }
 
@@ -44,6 +60,12 @@
   background-color: #2a81bb;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .maxCard .blob {
+    margin-bottom: 5%;
+  }
+}
+
 .maxCard .img {
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
@@ -51,12 +73,25 @@
   grid-area: img;
   background-color: white;
   width: 100%;
-  height: 90%;
+  height: 65vh;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 35px;
   -webkit-box-shadow: -10px 10px 10px #bebebe;
           box-shadow: -10px 10px 10px #bebebe;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .maxCard .img {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .maxCard .img {
+    margin-bottom: 10%;
+    height: 50vh;
+  }
 }
 
 .maxCard .title {
@@ -95,7 +130,19 @@
   margin: 0;
 }
 
-.maxCard .count {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .maxCard .price {
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .maxCard .cardConteiner {
+    margin-bottom: 10%;
+  }
+}
+
+.maxCard .cardConteiner .count {
   -ms-grid-row: 5;
   -ms-grid-column: 2;
   grid-area: count;
