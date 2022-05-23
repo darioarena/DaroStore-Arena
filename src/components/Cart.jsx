@@ -48,9 +48,6 @@ function Cart() {
     blobForm.appendChild(nuevoTitulo);
     blobForm.style.gridTemplateColumns='1fr';
     document.getElementsByClassName('itemContainer')[0].style.display='none';
-    document.getElementsByClassName('total')[0].style.display='none';
-    document.getElementsByClassName('noselect')[0].style.display='none';
-    document.getElementsByClassName('comprar')[0].style.display='none';
     document.getElementsByClassName('end')[0].style.display='flex';
     document.getElementsByClassName('botones')[0].style.justifyContent='end';
     document.getElementsByClassName('formulario')[0].style.display='flex';
