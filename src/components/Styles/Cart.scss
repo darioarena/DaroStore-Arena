@@ -62,8 +62,8 @@
 .noselect.comprar {
   font-family: $poppins;
   letter-spacing: 3px;
-  background: #1db43b;
-  box-shadow: 0px 5px 20px rgba(33, 178, 120, 0.6);
+  background: #2e34e5;
+  box-shadow: 0px 15px 20px rgba(49, 46, 229, 0.5);
 }
 
 .noselect,
@@ -92,7 +92,11 @@
 }
 
 .noselect .icon.comprar {
-  border-left: 1px solid #178e2f;
+  border-left: 1px solid #2127c0;
+}
+
+.noselect.end .icon.comprar {
+  border-left: 1px solid #1db43b;
 }
 
 .noselect svg {
@@ -111,8 +115,8 @@
 }
 
 .noselect.comprar:hover {
-  background: #3fce5c;
-  box-shadow: 0px 15px 20px rgba(33, 178, 120, 0.6);
+  background: #2e34e5;
+  box-shadow: 0px 15px 20px rgba(49, 46, 229,0.6);
 }
 
 .noselect:hover .text {
@@ -131,6 +135,14 @@
 
 .noselect:active .icon svg {
   transform: scale(0.8);
+}
+
+.noselect.comprar.end{
+  letter-spacing: 3px;
+  background: #1db43b;
+  box-shadow: 0px 5px 20px rgba(33, 178, 120, 0.6);
+  margin: 30px auto 0px auto;
+  // display: none;
 }
 
 .cardCart {
@@ -286,6 +298,27 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+  }
+  .formulario{
+    display: none;
+    flex-flow: column wrap;
+    font-family: $poppins;
+    .infoForm{
+      font-size: 15px;
+      font-weight: bold;
+      margin: 5px auto;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      &:focus{
+        box-shadow: 0px 0px 15px rgba(49, 46, 229, 0.5);
+        outline: none;
+        border-radius: 5px;
+      }
+      &::placeholder{
+        color: lightgray;
+      }
+    }
   }
 }
 
