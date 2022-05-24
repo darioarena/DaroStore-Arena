@@ -98,11 +98,11 @@
 }
 
 .viewCart {
-  margin: 20px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
   font-family: $poppins;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  padding: 15px;
+  padding: 10px;
   font-size: 15px;
   font-weight: 500;
   color: #000;
@@ -119,6 +119,10 @@
     color: #fff;
   }
   @media #{$tablet} {
+    background-color: #21b278;
+    color: #fff;
+  }
+  @media #{$phone} {
     background-color: #21b278;
     color: #fff;
   }

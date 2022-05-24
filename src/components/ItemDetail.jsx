@@ -24,13 +24,30 @@ function ItemDetail({ producto }) {
         <h3 className="title">{producto.product}</h3>
         <h3 className="description">DETALLE {producto.detail}</h3>
         <h4 className="price">${Intl.NumberFormat("es-AR").format(producto.price)}</h4>
-        {isInCart ? (<div>
-          <Link to="/cart" className="opcion">
-            <p className="viewCart">Ver Carrito</p>
-          </Link>
-          <Link to="/" className="opcion">
-          <p className="viewCart">Seguir comprando</p>
-          </Link>
+        {isInCart ? (
+          <div>
+            <Link to="/cart" className="opcion">
+              <p className="viewCart">
+                Ver Carrito{" "}
+                <lord-icon
+                  src="https://cdn.lordicon.com/dnoiydox.json"
+                  trigger="loop"
+                  colors="primary:#ffffff,secondary:#ffffff"
+                  stroke="100"
+                ></lord-icon>
+              </p>
+            </Link>
+            <Link to="/" className="opcion">
+              <p className="viewCart">
+                Seguir comprando{" "}
+                <lord-icon
+                  src="https://cdn.lordicon.com/nlzvfogq.json"
+                  trigger="loop"
+                  colors="primary:#ffffff,secondary:#ffffff"
+                  stroke="100"
+                ></lord-icon>
+              </p>
+            </Link>
           </div>
         ) : (
           <ItemCount stock={producto.stock} initial={1} className="count" onAdd={onAdd} />

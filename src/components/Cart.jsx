@@ -137,7 +137,7 @@ function Cart() {
           </div>
         </div>
         <div className="formulario">
-          <CartForm/>
+          <CartForm />
           <button onClick={handleBuy} className="noselect comprar end">
             <span className="text comprar" id="next">
               COMPRAR
