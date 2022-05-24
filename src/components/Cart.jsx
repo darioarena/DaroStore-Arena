@@ -5,6 +5,8 @@ import useCartContext from "../store/CartContext";
 import "./Styles/Cart.css";
 import { createBuyOrder } from "../data/firebase";
 import CartForm from "./CartForm";
+import { Link } from "react-router-dom";
+
 
 defineLordIconElement(loadAnimation);
 
@@ -61,9 +63,9 @@ function Cart() {
             <h3 className="noItemCart">
               Gracias {datosComprador.name} por tu compra, la orden es {orderID}
             </h3>
-            <a href="/" className="home">
+            <Link to="/" className="home">
               Volver a Home
-            </a>
+            </Link>
           </div>
         );
       } else {
