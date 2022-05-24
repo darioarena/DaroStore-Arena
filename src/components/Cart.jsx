@@ -7,7 +7,6 @@ import { createBuyOrder } from "../data/firebase";
 import CartForm from "./CartForm";
 import { Link } from "react-router-dom";
 
-
 defineLordIconElement(loadAnimation);
 
 function Cart() {
@@ -64,7 +63,9 @@ function Cart() {
               Gracias {datosComprador.name} por tu compra, la orden es {orderID}
             </h3>
             <Link to="/" className="home">
+              <span>
               Volver a Home
+              </span>
             </Link>
           </div>
         );
