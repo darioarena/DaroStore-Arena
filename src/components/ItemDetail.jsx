@@ -24,10 +24,14 @@ function ItemDetail({ producto }) {
         <h3 className="title">{producto.product}</h3>
         <h3 className="description">DETALLE {producto.detail}</h3>
         <h4 className="price">${Intl.NumberFormat("es-AR").format(producto.price)}</h4>
-        {isInCart ? (
+        {isInCart ? (<div>
           <Link to="/cart" className="opcion">
             <p className="viewCart">Ver Carrito</p>
           </Link>
+          <Link to="/" className="opcion">
+          <p className="viewCart">Seguir comprando</p>
+          </Link>
+          </div>
         ) : (
           <ItemCount stock={producto.stock} initial={1} className="count" onAdd={onAdd} />
         )}

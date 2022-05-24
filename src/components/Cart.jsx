@@ -4,6 +4,7 @@ import { defineLordIconElement } from "lord-icon-element";
 import useCartContext from "../store/CartContext";
 import "./Styles/Cart.css";
 import { createBuyOrder } from "../data/firebase";
+import CartForm from "./CartForm";
 
 defineLordIconElement(loadAnimation);
 
@@ -136,18 +137,7 @@ function Cart() {
           </div>
         </div>
         <div className="formulario">
-          <label htmlFor="fname" className="infoForm">
-            NOMBRE Y APELLIDO
-          </label>
-          <input type="text" id="fname" placeholder="Homero Simpson" className="infoForm" />
-          <label htmlFor="email" className="infoForm">
-            CORREO
-          </label>
-          <input type="email" id="email" placeholder="homero@duff.com" className="infoForm" />
-          <label htmlFor="phone" className="infoForm">
-            TELEFONO
-          </label>
-          <input type="tel" id="phone" placeholder="+54 351 3123456" className="infoForm" />
+          <CartForm/>
           <button onClick={handleBuy} className="noselect comprar end">
             <span className="text comprar" id="next">
               COMPRAR
