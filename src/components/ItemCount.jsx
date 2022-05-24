@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Styles/ItemCount.css';
+import "./Styles/ItemCount.css";
 
 function ItemCount(props) {
   const [count, setCount] = useState(props.initial);
@@ -20,12 +20,16 @@ function ItemCount(props) {
     <div className="cardConteiner">
       <div className="count">
         <h3>Producto</h3>
-        <button onClick={handleSubsctract} className="countSub">-</button>
+        <button onClick={handleSubsctract} className="countSub">
+          -
+        </button>
         <span> {count} </span>
-        <button onClick={handleAdd} className="countAdd">+</button>
+        <button onClick={handleAdd} className="countAdd">
+          +
+        </button>
       </div>
       <div className="onAdd">
-        <button onClick={()=>props.onAdd(count)} >Agregar al carrito</button>
+        <button onClick={() => props.onAdd(count)}>Agregar al carrito</button>
       </div>
     </div>
   );

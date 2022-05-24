@@ -5,7 +5,6 @@ import useCartContext from "../store/CartContext";
 import "./Styles/Cart.css";
 import { createBuyOrder } from "../data/firebase";
 
-
 defineLordIconElement(loadAnimation);
 
 function Cart() {
@@ -13,14 +12,12 @@ function Cart() {
   const [orderID, setOrderID] = useState();
   const [datosComprador, setDatosComprador] = useState();
 
-
   function handleBuy() {
-
-    const data={
-      name: document.getElementById('fname').value,
-      phone: document.getElementById('phone').value,
-      email: document.getElementById('email').value
-    }
+    const data = {
+      name: document.getElementById("fname").value,
+      phone: document.getElementById("phone").value,
+      email: document.getElementById("email").value,
+    };
 
     const itemsToBuy = cart.map((item) => ({ title: item.product, cant: item.cant, price: item.price, id: item.id }));
     const buyOrder = {
@@ -36,21 +33,21 @@ function Cart() {
     clearCart();
   }
 
-  function handleForm(){
-    const cabeceraCart = document.getElementsByClassName('cartTable');
+  function handleForm() {
+    const cabeceraCart = document.getElementsByClassName("cartTable");
     for (let i = 0; i < cabeceraCart.length; i++) {
-      cabeceraCart[i].style.display='none';
+      cabeceraCart[i].style.display = "none";
     }
-    const nuevoTitulo = document.createElement('span');
-    const blobForm = document.getElementById('tituloForm');
-    nuevoTitulo.innerHTML='FORMULARIO';
-    nuevoTitulo.setAttribute('class','cartTable')
+    const nuevoTitulo = document.createElement("span");
+    const blobForm = document.getElementById("tituloForm");
+    nuevoTitulo.innerHTML = "FORMULARIO";
+    nuevoTitulo.setAttribute("class", "cartTable");
     blobForm.appendChild(nuevoTitulo);
-    blobForm.style.gridTemplateColumns='1fr';
-    document.getElementsByClassName('itemContainer')[0].style.display='none';
-    document.getElementsByClassName('end')[0].style.display='flex';
-    document.getElementsByClassName('botones')[0].style.justifyContent='end';
-    document.getElementsByClassName('formulario')[0].style.display='flex';
+    blobForm.style.gridTemplateColumns = "1fr";
+    document.getElementsByClassName("itemContainer")[0].style.display = "none";
+    document.getElementsByClassName("end")[0].style.display = "flex";
+    document.getElementsByClassName("botones")[0].style.justifyContent = "end";
+    document.getElementsByClassName("formulario")[0].style.display = "flex";
   }
 
   if (cart.length === 0) {
@@ -60,7 +57,9 @@ function Cart() {
       if (orderID) {
         return (
           <div>
-            <h3 className="noItemCart">Gracias {datosComprador.name} por tu compra, la orden es {orderID}</h3>
+            <h3 className="noItemCart">
+              Gracias {datosComprador.name} por tu compra, la orden es {orderID}
+            </h3>
             <a href="/" className="home">
               Volver a Home
             </a>
@@ -94,11 +93,12 @@ function Cart() {
               <div className="detailContainer" key={itemCart.id}>
                 <img src={itemCart.url} className="imagen" alt="imagen"></img>
                 <h3 className="title">{itemCart.product}</h3>
-                <h3 className="cantidad"><span className="cant">Cantidad</span>{itemCart.cant}</h3>
+                <h3 className="cantidad">
+                  <span className="cant">Cantidad</span>
+                  {itemCart.cant}
+                </h3>
                 <h4 className="unitario">${Intl.NumberFormat("es-AR").format(itemCart.price)}</h4>
-                <h4 className="subtotal">
-                  ${Intl.NumberFormat("es-AR").format(itemCart.cant * itemCart.price)}
-                </h4>
+                <h4 className="subtotal">${Intl.NumberFormat("es-AR").format(itemCart.cant * itemCart.price)}</h4>
                 <button onClick={() => removeToCart(itemCart.id)}>
                   <lord-icon
                     src="https://cdn.lordicon.com/gsqxdxog.json"
@@ -123,8 +123,10 @@ function Cart() {
                 </svg>
               </span>
             </button>
-            <button onClick={handleForm} id='comprar' className="noselect comprar">
-              <span className="text comprar" id="next">SIGUIENTE</span>
+            <button onClick={handleForm} id="comprar" className="noselect comprar">
+              <span className="text comprar" id="next">
+                SIGUIENTE
+              </span>
               <span className="icon comprar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                   <path d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z" />
@@ -134,21 +136,28 @@ function Cart() {
           </div>
         </div>
         <div className="formulario">
-          <label htmlFor="fname" className="infoForm">NOMBRE Y APELLIDO</label>
-          <input type="text" id="fname" placeholder="Homero Simpson" className="infoForm"/>
-          <label htmlFor="email" className="infoForm">CORREO</label>
-          <input type="email" id="email" placeholder="homero@duff.com" className="infoForm"/>
-          <label htmlFor="phone" className="infoForm">TELEFONO</label>
-          <input type="tel" id="phone" placeholder="+54 351 3123456" className="infoForm"/>
+          <label htmlFor="fname" className="infoForm">
+            NOMBRE Y APELLIDO
+          </label>
+          <input type="text" id="fname" placeholder="Homero Simpson" className="infoForm" />
+          <label htmlFor="email" className="infoForm">
+            CORREO
+          </label>
+          <input type="email" id="email" placeholder="homero@duff.com" className="infoForm" />
+          <label htmlFor="phone" className="infoForm">
+            TELEFONO
+          </label>
+          <input type="tel" id="phone" placeholder="+54 351 3123456" className="infoForm" />
           <button onClick={handleBuy} className="noselect comprar end">
-              <span className="text comprar" id="next">COMPRAR</span>
-              <span className="icon comprar">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z" />
-                </svg>
-              </span>
-            </button>
-
+            <span className="text comprar" id="next">
+              COMPRAR
+            </span>
+            <span className="icon comprar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z" />
+              </svg>
+            </span>
+          </button>
         </div>
       </div>
     );
