@@ -73,9 +73,11 @@ function Cart() {
         return (
           <div>
             <h3 className="noItemCart">No hay items en el carrito</h3>
-            <a href="/" className="home">
+            <Link to="/" className="home">
+              <span>
               Volver a Home
-            </a>
+              </span>
+            </Link>
           </div>
         );
       }
